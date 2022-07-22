@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Coding Exercise</title>
+</head>
+
+<body>
+  <h1>Coding Exercise</h1>
+  <p>Enter a string. I will tell you how many times first character appear in that string</p>
+
+  <form>
+    <label for="guess">Enter a string here</label>
+    <input type="text" id="guess1">  
+    <input type="button" id="submitGuess" value="Run">
+  </form>
+
+  <p id="feedback"></p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+ 
+  <script>
+    function print(txt){
+    	feedback.textContent = feedback.textContent + "\r\n"+txt; 
+    }
+   function test() {
+   	start(guess1.value);
+   }
+   /*
+   Use print() function to print the output. 
+   */
+   function start(str){
+    let f=str.charAt(0);
+    let count=0;
+    for(let i=0;i<str.length;i++)
+    {
+      if(f===str.charAt(i)){
+        count++;
+      }
+    }	
+    print("First char count is: "+count);	
+   }
+   submitGuess.addEventListener('click', test);
+ </script>
+ <script src="student.js"></script>
+
+</body>
+
+</html>

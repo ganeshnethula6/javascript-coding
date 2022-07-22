@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Coding Exercise</title>
+</head>
+
+<body>
+  <h1>Coding Exercise</h1>
+  <p>Enter a string and character. I will tell you which position that character is. If the character does not exist, I will tell you that too</p>
+
+  <form>
+    <label for="guess">Enter a string here</label>
+    <input type="text" id="guess1">  <br/>
+    <label for="guess">Enter a character here</label>
+    <input type="text" id="guess2">  
+
+    <input type="button" id="submitGuess" value="Run">
+  </form>
+
+  <p id="feedback"></p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+ 
+  <script>
+    function print(txt){
+    	feedback.textContent = feedback.textContent + "\r\n"+txt; 
+    }
+   function test() {
+   	start(guess1.value, guess2.value);
+   }
+   /*
+   Use print() function to print the output. 
+   */
+   function start(str1, chr){
+    let loc=str1.indexOf(chr);
+    if(loc===-1)
+    {
+      print("character doesn't exist.");
+    }	
+    else{
+      print("The position of the character in string is :"+ parseInt(loc+1));
+    }	
+   }
+   submitGuess.addEventListener('click', test);
+ </script>
+ <script src="student.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Coding Exercise</title>
+</head>
+
+<body>
+  <h1>Coding Exercise</h1>
+  <p>Enter a number here. I will find what is the last digit in that number.</p>
+
+  <form>
+    <label for="guess">Enter your number here</label>
+    <input type="text" id="guess1">  
+    <input type="button" id="submitGuess" value="Run">
+  </form>
+
+  <p id="feedback"></p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+ 
+  <script>
+    function print(txt){
+    	feedback.textContent = feedback.textContent + "\r\n"+txt; 
+    }
+   function test() {
+   	start(guess1.value);
+   }
+   /*
+   Use print() function to print the output
+   */
+   function start(userInput){
+    let value=Number(userInput.trim());
+
+    print(value%10);
+   }
+   submitGuess.addEventListener('click', test);
+ </script>
+
+
+</body>
+
+</html>

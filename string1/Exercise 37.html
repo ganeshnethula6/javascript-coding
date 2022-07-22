@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Coding Exercise</title>
+</head>
+
+<body>
+  <h1>Coding Exercise</h1>
+  <p>User will enter phone number. User may enter spaces, hyphen, bracket. Strip out all characters other than numbers. Show only 10 digit phone number. Use charCodeAt function. This function gives ASCII value of character. Using ASCII values, strip out non numeric characters</p>
+
+  <form>
+    <label for="guess">Enter phone numbers with special characters here</label>
+    <input type="text" id="guess1">  
+    <input type="button" id="submitGuess" value="Run">
+  </form>
+
+  <p id="feedback"></p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+ 
+  <script>
+    function print(txt){
+    	feedback.textContent = feedback.textContent + "\r\n"+txt; 
+    }
+   function test() {
+   	start(guess1.value);
+   }
+   /*
+   Use print() function to print the output. 
+   */
+   function start(str){
+    let pno="";
+    for(let i=0;i<str.length;i++)
+    {
+      console.log(str.charCodeAt(i));
+      console.log(str.charCodeAt(i));
+      if(str.charCodeAt(i)>=48 && str.charCodeAt(i)<=57){
+        pno+=str[i];
+      }
+    }
+   if(pno.length===10)
+   {
+    print(pno);
+   }	
+   else{
+    print("phone number should be length is 10 ::     "+pno);
+   }
+   }
+   submitGuess.addEventListener('click', test);
+ </script>
+ <script src="student.js"></script>
+
+</body>
+
+</html>

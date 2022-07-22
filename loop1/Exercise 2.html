@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Coding Exercise</title>
+</head>
+
+<body>
+  <h1>Coding Exercise</h1>
+  <p>Print even numbers from 1 to 100 using for loop. Write code in start function. use print() function to print</p>
+
+  <form>
+    <input type="button" id="submitGuess" value="Run">
+  </form>
+
+  <p id="feedback"></p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+ 
+  <script>
+    function print(txt){
+    	feedback.textContent = feedback.textContent + "\r\n"+txt; 
+    }
+ 
+   function start(userInput){
+    for(var i=1;i<=100;i++)
+    {
+      if(i%2==0)
+      {
+        print(i);
+      }
+    }  
+   		
+   }
+   submitGuess.addEventListener('click', start)
+ </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Coding Exercise</title>
+</head>
+
+<body>
+  <h1>Coding Exercise</h1>
+  <p>Enter date in dd/mm/yyyy format. I will tell tell you the month name</p>
+
+  <form>
+    <label for="guess">Enter date in dd/mm/yyyy format</label>
+    <input type="text" id="guess1">  
+    <input type="button" id="submitGuess" value="Run">
+  </form>
+
+  <p id="feedback"></p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+ 
+  <script>
+    function print(txt){
+    	feedback.textContent = feedback.textContent + "\r\n"+txt; 
+    }
+   function test() {
+   	start(guess1.value);
+   }
+   /*
+   Use print() function to print the output. 
+   */
+   function start(str){
+    let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let dateArray=str.trim().split("/");
+    let dateString=dateArray[2]+"-"+dateArray[1]+"-"+dateArray[0];
+    let d=new Date(dateString);
+    print(months[d.getMonth()])
+		
+   }
+   submitGuess.addEventListener('click', test);
+ </script>
+ <script src="student.js"></script>
+
+</body>
+
+</html>

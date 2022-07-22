@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Coding Exercise</title>
+</head>
+
+<body>
+  <h1>Coding Exercise</h1>
+  <p>Enter a number here. I will find if that number is prime number or not</p>
+
+  <form>
+    <label for="guess">Enter your number here</label>
+    <input type="text" id="guess1">  
+    <input type="button" id="submitGuess" value="Run">
+  </form>
+
+  <p id="feedback"></p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+ 
+  <script>
+    function print(txt){
+    	feedback.textContent = feedback.textContent + "\r\n"+txt; 
+    }
+   function test() {
+   	start(guess1.value);
+   }
+   /*
+   Use print() function to print the output
+   */
+   function start(userInput){
+    var num=Number(userInput.trim());
+    var m=num/2;
+    if(num==0 || num==1)
+    {
+      print("Not a Prime");
+    }
+    else{
+    for( var i=2;i<=m;i++)
+    {
+      if(num%i==0)
+      {
+        print("Not a Prime");
+        break;
+      }
+    }
+  }
+  print("Prime");
+		
+   }
+   submitGuess.addEventListener('click', test);
+ </script>
+ <script src="student.js"></script>
+
+</body>
+
+</html>
